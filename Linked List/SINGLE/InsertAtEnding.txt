@@ -1,0 +1,17 @@
+void insertEND()
+{
+	newnode=(struct node*)malloc(sizeof(struct node));
+	printf("\n ENTER DATA : ");
+	scanf("%d",&newnode->data);
+	newnode->next=NULL;
+	if(head==NULL)
+	{
+		head=newnode;
+	}
+	else
+	{
+		for(temp=head;temp->next!=NULL;temp=temp->next);
+		temp->next=newnode;
+	}
+	printf("\n INSERTED SUCCESSFULLY");
+}

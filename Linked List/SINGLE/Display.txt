@@ -1,0 +1,16 @@
+void display()
+{
+	if(head==NULL)
+	{
+		printf("\n LIST IS EMPTY ");
+	}
+	else
+	{
+		printf("\n SINGLY LIST : ");
+		for(temp=head;temp!=NULL;temp=temp->next)
+		{
+			printf("%d->",temp->data);
+		}
+		printf("NULL");
+	}
+}

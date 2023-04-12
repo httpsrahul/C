@@ -1,0 +1,14 @@
+void deleteFIRST()
+{
+	if(head==NULL)
+	{
+		printf("\n LIST IS EMPTY");
+	}
+	else
+	{
+		temp=head;
+		head=temp->next;
+		free(temp);
+		printf("\n DELETED SUCCESSFULLY");
+	}
+}

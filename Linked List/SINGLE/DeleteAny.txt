@@ -1,0 +1,41 @@
+void deleteANY()
+{
+	if(head==NULL)
+	{
+		printf("\n LIST IS EMPTY");
+	}
+	else
+	{
+		flag=0;
+		display();
+		printf("\n ENTER DATA : ");
+		scanf("%d",&search);
+		if(head->data==search)
+		{
+			flag=1;
+			deleteFIRST();
+		}
+		else
+		{
+			for(temp=head;temp->next!=NULL;temp=temp->next)
+			{
+				if(temp->next->data==search)
+				{
+					flag=1;
+					dummy=temp->next;
+					temp->next=dummy->next;
+					free(dummy);
+					break;
+				}
+			}
+		}
+		if(flag==0)
+		{
+			printf("\n DATA NOT FOUND");
+		}
+		else
+		{
+			printf("\n DELETED SUCCESSFULLY");
+		}
+	}
+}

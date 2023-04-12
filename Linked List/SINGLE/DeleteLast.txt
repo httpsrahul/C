@@ -1,0 +1,14 @@
+void deleteLAST()
+{
+	if(head==NULL)
+	{
+		printf("\n LIST IS EMPTY");
+	}
+	else
+	{
+		for(temp=head;temp->next->next!=NULL;temp=temp->next);
+		free(temp->next);
+		temp->next=NULL;
+		printf("\n DELETED SUCCESSFULLY");
+	}
+}

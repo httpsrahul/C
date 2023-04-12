@@ -1,0 +1,9 @@
+void insertBEGIN()
+{
+	newnode=(struct node*)malloc(sizeof(struct node));
+	printf("\n ENTER DATA : ");
+	scanf("%d",&newnode->data);
+	newnode->next=head;
+	head=newnode;
+	printf("\n INSERTED SUCCESSFULLY");
+}

@@ -1,0 +1,29 @@
+void update()
+{
+	if(head==NULL)
+	{
+		printf("\n LIST IS EMPTY");
+	}
+	else
+	{
+		flag=0;
+		display();
+		printf("\n ENTER ELEMENT  : ");
+		scanf("%d",&search);
+		for(temp=head;temp!=NULL;temp=temp->next)
+		{
+			if(temp->data==search)
+			{
+				flag=1;
+				printf("\n ENTER DATA : ");
+				scanf("%d",&temp->data);
+				printf("\n UPDATED SUCCESSFULLY");
+				break;
+			}
+		}
+		if(flag==0)
+		{
+			printf("\n DATA NOT FOUND !");
+		}
+	}
+}

@@ -1,0 +1,32 @@
+void insertAFTER()
+{
+	if(head==NULL)
+	{
+		printf("\n LIST IS EMPTY");
+	}
+	else
+	{
+		flag=0;
+		display();
+		printf("\n ENTER ELEMENT : ");
+		scanf("%d",&search);
+		for(temp=head;temp->next!=NULL;temp=temp->next)
+		{
+			if(temp->data==search)
+			{
+				flag=1;
+				newnode=(struct node*)malloc(sizeof(struct node));
+				printf("\n ENTER DATA : ");
+				scanf("%d",&newnode->data);
+				newnode->next=temp->next;
+				temp->next=newnode;
+				printf("\n INSERTED SUCCESSFULLY");
+				break;
+			}
+		}
+		if(flag==0)
+		{
+			printf("\n DATA NOT FOUND !");
+		}
+	}
+}
