@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap.css">
+    <style>
+        body{
+            background-image: url('/bg.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .form{
+            height:340px;
+            width:800px;
+            padding: 15px;
+            margin: 150px auto;
+            outline: 2px solid black;
+            outline-offset: -5px;
+        }
+
+        .input{
+            height: 300px;
+            width:500px;
+        }
+        .pic{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-left:55px;
+            padding: 5px;
+            background: linear-gradient(#405DE6,#5851DB,#833AB4,#C13584,#E1306C,#FD1D1D,#F56040,#F77737);
+        }
+        img{
+            border-radius: 50%;
+            width: 140px;
+            height: 140px;
+        }
+        
+    </style>
+</head>
+
+<body class="bg-dark text-light">
+    <div class="container text-dark">
+        <form action="#" method="post">
+            
+            <div class="row form bg-light">
+                <div class="col-9 input p-2">
+                    <div class="row p-1">
+                        <div class="col-3">
+                            <label for="uname">Username</label>
+                        </div>
+                        <div class="col-9">
+                            <input type="text" name="uname" id="uname" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row p-1">
+                        <div class="col-3">
+                            <label for="pass">Password</label>
+                        </div>
+                        <div class="col-9">
+                            <input type="password" name="pass" id="pass" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row p-1">
+                        <div class="col-3">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="col-9">
+                            <input type="email" name="email" id="email" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row p-1">
+                        <div class="col-3">
+                            <label for="contact">Mobile</label>
+                        </div>
+                        <div class="col-9">
+                            <input type="number" name="contact" id="contact" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row p-1">
+                        <div class="col-3">
+                            <label for="gender">Gender</label>
+                        </div>
+                        <div class="col-9">
+                            <input type="radio" name="gender" id="gender" class="form-check-input">
+                            <label for="male">Male</label>
+                            <input type="radio" name="gender" id="gender" class="form-check-input">
+                            <label for="female">Female</label>
+                        </div>
+                    </div>
+                    <div class="row p-1">
+                        <div class="col-3">
+                            <label for="hobbie">Hobbies</label>
+                        </div>
+                        <div class="col-9">
+                            <input type="checkbox" name="hii" id="Music" class="p-0 form-check-input form-check-inline">
+                            <label for="Music" class="form-check-label">Music</label>
+                            <input type="checkbox" name="hii" id="Sport" class="form-check-input form-check-inline">
+                            <label for="Sport" class="form-check-label">Sport</label>
+                            <input type="checkbox" name="hii" id="Dance" class="form-check-input form-check-inline">
+                            <label for="Dance" class="form-check-label">Dance</label>
+                            <input type="checkbox" name="hii" id="Other" class="form-check-input form-check-inline">
+                            <label for="Other" class="form-check-label">Other</label>
+                        </div>
+                    </div>
+                    <div class="row p-1">
+                        <div class="col-3">
+                            <label for="country">Country</label>
+                        </div>
+                        <div class="col-9">
+                            <select name="country" id="country" class="form-select">
+                                <option value="india">India</option>
+                                <option value="india">Korea</option>
+                                <option value="india">USA</option>
+                                <option value="india">Israel</option>
+                                <option value="india">Russia</option>
+                                <option value="india">Japan</option>
+                                <option value="india">Austrailia</option>
+                                <option value="india">UK</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">  
+                    <div class="row">
+                        <div class="col-12 pic">
+                            <img src="/OIP.jpg" alt="Not Found !" id="dp">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 p-3">
+                            <input type="file" name="name" id="pfp" class="mt-2" type="jpg" >
+                        </div>
+                    </div>
+                    <div class="row p-1">
+                        <div class="col-6">
+                            <input type="button" class="btn btn-primary" value="Upload" onclick="showImage()">
+                        </div>
+                        <div class="col-6">
+                            <input type="submit" value="Register" class="btn btn-primary">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        function showImage()
+        {
+            let x=document.getElementById("pfp").value;
+ 
+            let link = x.replace(/^.*\\/, "")
+            
+            document.getElementById('dp').src=link;
+        }
+        
+    </script>
+</body>
+</html>
